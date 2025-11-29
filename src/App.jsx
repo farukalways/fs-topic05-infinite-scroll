@@ -1,9 +1,9 @@
+import ProductList from "./components/ProductList";
+
 const App = () => {
   return (
     <div>
-      <h2>App App</h2>
-      <h2>App App</h2>
-      <h2>App App</h2>
+      <ProductList />
     </div>
   );
 };
