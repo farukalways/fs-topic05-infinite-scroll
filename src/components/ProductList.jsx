@@ -6,11 +6,12 @@ const ProductList = () => {
   const [page, setPage] = useState(0);
   const [hasMore, setHasMore] = useState(true);
   const loaderRef = useRef();
+  const perPageProduct = 9;
 
   useEffect(() => {
     const fetchProduct = async () => {
       const response = await fetch(
-        `https://dummyjson.com/products?limit=9&skip=${page * 9}`
+        `https://dummyjson.com/products?limit=9&skip=${page * perPageProduct}`
       );
       const data = await response.json();
       if (data.products.length === 0) {
